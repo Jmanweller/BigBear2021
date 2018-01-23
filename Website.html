@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+  body {font-family: Trade-Gothic-W-Cond-Bold, Arial, Helvetica, sans-serif; margin:0;}
+
+  .container  {
+   max-width: 1620px
+  }
+
+  .headerimage{
+   display: block;
+   margin: 0 auto;
+   position: relative;
+   height: 150px;
+  }
+
+  .imagemain{
+   margin: 0px;
+  }
+
+  .imageitem{
+   filter: grayscale(100%);
+   height: 100%;
+   width: 100%;
+  }
+
+  .infobar{  
+   background-color: #fc7031;
+   margin-bottom: 20px;
+  }
+
+  .infoholder{
+   max-width: 800px;
+   display: block;
+   margin: 0 auto;
+   text-align: center;
+  }
+
+  .infoitem{
+   color: white;
+   font-size: 21px;
+   text-transform: uppercase;
+   text-align: center;
+   padding: 20px 0;
+  }
+
+  .infotitle{
+   color: rgba(255,255,255,.4);
+   font-size: 16px;
+   text-align: center;
+   display: block;
+  }
+
+  .tab.container  {
+   max-width: 900px;
+   margin-top: 5px
+   margin-bottom: 5px
+  }
+
+  .tab button {
+     margin: 0 auto;
+     background-color: inherit;
+     border: none;
+     outline: none;
+     cursor: pointer;
+     transition: 0.3s;
+     color: #060606;
+     text-align: center;     
+     font-size: 20px;
+   }
+
+  .tab button:hover {
+     color: black;
+     font-weight: bold;
+  }
+
+  .tab button.active {
+     color: black;
+     font-weight: bold;
+  }
+
+  .tabcontent {
+     display: flex;
+     padding: 25px 12px;
+     text-align: center;
+     padding-bottom: 40px;
+  }
+
+  .countrylist{
+  display: inline-block;
+  list-style: none;
+  width: 100%;
+  font-size: 20px;
+  line-height: 30px;
+  }
+
+  .countryflag{
+   width: 90%;
+   border:1px solid #021a40;
+  }
+
+  .sectionheader{
+   font-size: 32px;
+   font-weight: bold;  
+  }
+
+  .liststuff{
+   list-style-type: none;
+   padding-left: 0;
+   padding-top: 10px;
+   padding-bottom: 10px;
+  }
+
+  .tab{
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .padding-0{
+    padding-right:0;
+    padding-left:0;
+}
+
+  </style>
+  <title></title>
+</head>
+<body>
+  <div class="headerbar">
+          <img class="headerimage" src="C:/Users/Jer/Pictures/test.jpg"></div>
+     <div class="imagemain row">          
+          <img class="imageitem col-sm-3 padding-0" src="C:/Users/Jer/Pictures/Flags/BeerOlympics1.jpg">
+          <img class="imageitem col-sm-3 padding-0" src="C:/Users/Jer/Pictures/Flags/WinterOlympics1.jpg">
+          <img class="imageitem col-sm-3 padding-0" src="C:/Users/Jer/Pictures/Flags/WinterOlympics2.jpg">
+          <img class="imageitem col-sm-3 padding-0" src="C:/Users/Jer/Pictures/Flags/BeerOlympics2.jpg"> 
+     </div>
+   <div class="infobar">
+      <div class="infoholder container">
+       <div class="row">
+         <div class="infoitem col-sm-3">
+            <strong class="infotitle">DATE</strong> 17 Feb
+         </div>
+         <div class="infoitem col-sm-3">
+            <strong class="infotitle">TIME</strong> 1230 PM
+         </div>       
+         <div class="infoitem col-sm-3">
+           <strong class="infotitle">LOCATION</strong> 45 Serenity
+         </div>
+         <div class="infoitem col-sm-3">
+            <strong class="infotitle">COUNTDOWN</strong> 30 Days
+        </div>
+      </div>
+   </div>
+  </div>
+  <div class="tab container">
+    <div class="row">
+      <button class="tablinks col-sm-2" id="defaultOpen" onclick="openSection(event, 'Countries')">Countries</button> 
+      <button class="tablinks col-sm-2" onclick="openSection(event, 'BeerPong')">Beer Pong</button>
+      <button class="tablinks col-sm-2" onclick="openSection(event, 'FlipCup')">Flip Cup</button>
+      <button class="tablinks col-sm-2" onclick="openSection(event, 'Cornhole')">Cornhole</button>
+      <button class="tablinks col-sm-2" onclick="openSection(event, 'Relay')">Relay</button>
+      <button class="tablinks col-sm-2" onclick="openSection(event, 'More')">More</button>
+    </div>
+  </div>
+  <div class="tabcontent container" id="Countries">
+    <div class="row text-center">
+      <div class="col-sm-2 countrylist">
+        <img class="countryflag" src="C:/Users/Jer/Pictures/Flags/AfghanistanFlag.png" title="Afghanistan">
+        <ul class="liststuff">
+          <li>Brandon Rego</li>
+          <li>Omid Karger</li>
+        </ul>
+      </div>
+      <div class="col-sm-2 countrylist">
+        <img class="countryflag" src="C:/Users/Jer/Pictures/Flags/ArgentinaFlag.png" title="Argentina">
+        <ul class="liststuff">
+          <li>EJ McKay</li>
+          <li>Flo DiSarli</li>
+        </ul>
+      </div>
+      <div class="col-sm-2 countrylist">
+        <img class="countryflag" src="C:/Users/Jer/Pictures/Flags/AustralianFlag.png" title="Australia">
+        <ul class="liststuff">
+          <li>Jeremy Manweller</li>
+          <li>Sruthi Nair</li>
+        </ul>
+      </div>
+      <div class="col-sm-2 countrylist">
+        <img class="countryflag" src="C:/Users/Jer/Pictures/Flags/ChineseFlag.png" title="China">
+        <ul class="liststuff">
+          <li>Kevin Quach</li>
+          <li>Vicki Diep</li>
+        </ul>
+      </div>
+      <div class="col-sm-2 countrylist">
+        <img class="countryflag" src="C:/Users/Jer/Pictures/Flags/EgyptianFlag.png" title="Egypt">
+        <ul class="liststuff">
+          <li>Jason Claiborne</li>
+          <li>Justin Manweller</li>
+        </ul>
+      </div>
+      <div class="col-sm-2 countrylist">
+        <img class="countryflag" src="C:/Users/Jer/Pictures/Flags/GermanFlag.png" title="Germany">
+        <ul class="liststuff">
+          <li>Rob Diny</li>
+          <li>Tyler Ferris</li>
+        </ul>
+      </div>
+      <div class="col-sm-2 countrylist">
+        <img class="countryflag" src="C:/Users/Jer/Pictures/Flags/GreenlandFlag.png" title="Greenland">
+        <ul class="liststuff">
+          <li>David Holloway</li>
+          <li>Ulysses Quintanilla</li>
+        </ul>
+      </div>
+      <div class="col-sm-2 countrylist">
+        <img class="countryflag" src="C:/Users/Jer/Pictures/Flags/IndianFlag.png" title="India">
+        <ul class="liststuff">
+          <li>Kunal Atit</li>
+          <li>Sierra Mellish</li>
+        </ul>
+      </div>
+      <div class="col-sm-2 countrylist">
+        <img class="countryflag" src="C:/Users/Jer/Pictures/Flags/ItalianFlag.png" title="Italy">
+        <ul class="liststuff">
+          <li>Brittany Traufler</li>
+          <li>Diego Gomez</li>
+        </ul>
+      </div>
+      <div class="col-sm-2 countrylist">
+        <img class="countryflag" src="C:/Users/Jer/Pictures/Flags/JapaneseFlag.png" title="Japan">
+        <ul class="liststuff">
+          <li>Kris Martin</li>
+          <li>Lexa Kallasorg</li>
+        </ul>
+      </div>
+      <div class="col-sm-2 countrylist">
+        <img class="countryflag" src="C:/Users/Jer/Pictures/Flags/MexicanFlag.png" title="Mexico">
+        <ul class="liststuff">
+          <li>Eddie Zamora</li>
+          <li>Travis Clifford</li>
+        </ul>
+      </div>
+      <div class="col-sm-2 countrylist">
+        <img class="countryflag" src="C:/Users/Jer/Pictures/Flags/NorwayFlag.png" title="Norway">
+        <ul class="liststuff">
+          <li>Nathan Stokes</li>
+          <li>Valerie Stokes</li>
+        </ul>
+      </div>
+      <div class="col-sm-2 countrylist">
+        <img class="countryflag" src="C:/Users/Jer/Pictures/Flags/SpanishFlag.png" title="Spain">
+        <ul class="liststuff">          
+          <li>Nick Caputo</li>
+          <li>Raymond Vasquez</li>
+        </ul>
+      </div>
+      <div class="col-sm-2 countrylist">
+        <img class="countryflag" src="C:/Users/Jer/Pictures/Flags/RussianFlag.png" title="Russia">
+        <ul class="liststuff">
+          <li>Conrad Neill</li>
+          <li>Matt Farah</li>
+        </ul>
+      </div>
+      <div class="col-sm-2 countrylist">
+        <img class="countryflag" src="C:/Users/Jer/Pictures/Flags/ScottishFlag.png" title="Scotland">
+        <ul class="liststuff">
+          <li>TJ McCabe</li>
+          <li>TBD</li>
+        </ul>
+      </div>
+      <div class="col-sm-2 countrylist">
+        <img class="countryflag" src="C:/Users/Jer/Pictures/Flags/SouthKoreanFlag.png" title="South Korea">
+        <ul class="liststuff">
+          <li>Kevin Tran</li>
+          <li>Tony Nguyen</li>
+        </ul>
+      </div>
+      <div class="col-sm-2 countrylist">
+        <img class="countryflag" src="C:/Users/Jer/Pictures/Flags/SwissFlag.png" title="Switzerland">
+        <ul class="liststuff">
+          <li>Kayla Hackett</li>
+          <li>Sam Thompson</li>
+        </ul>
+      </div>
+      <div class="col-sm-2 countrylist">
+        <img class="countryflag" src="C:/Users/Jer/Pictures/Flags/AmericanFlag.png" title="USA">
+        <ul class="liststuff">
+          <li>Alex Zundel</li>
+          <li>Chance Munger</li>
+        </ul>
+      </div>    
+    </div>
+      <div class="col-sm-2 countrylist">
+        <img class="countryflag" src="C:/Users/Jer/Pictures/Flags/WelshFlag.png" title="Wales">
+        <ul class="liststuff">
+          <li>Brad Day</li>
+          <li>Evan Hill</li>
+        </ul>
+      </div>
+      <div class="col-sm-2 countrylist">
+        <img class="countryflag" src="C:/Users/Jer/Pictures/Flags/TBDFlag.png" title="TBD">
+        <ul class="liststuff">
+          <li>TBD</li>
+          <li>TBD</li>
+        </ul>
+      </div>
+  </div>
+  <div class="tabcontent" id="BeerPong">
+  <p class="sectionheader">Game Rules</p><img src="C:/Users/Jer/Pictures/Flags/BeerPongRules.png" title="Beer Pong">
+  <p class="sectionheader">Drinking Rules - Group Stage</p><img src="C:/Users/Jer/Pictures/Flags/BeerPongGroups.png" title="Beer Pong Groups">
+  <p class="sectionheader">Drinking Rules - Final Stage</p><img src="C:/Users/Jer/Pictures/Flags/BeerPongFinals.png" title="Beer Pong Finals"></div>
+  <div class="tabcontent" id="FlipCup">
+  <p class="sectionheader">Game Rules</p><img src="C:/Users/Jer/Pictures/Flags/FlipCupRules.png" title="Flip Cup"></img>
+  <p class="sectionheader">Finals</p><img src="C:/Users/Jer/Pictures/Flags/FlipCupFinals.png" title="Flip Cup Finals"></img></div>
+  <div class="tabcontent" id="Cornhole">
+  <p class="sectionheader">Game Rules</p><img src="C:/Users/Jer/Pictures/Flags/CornholeRules.png" title="Cornhole"></img>
+  <p class="sectionheader">Finals</p><img src="C:/Users/Jer/Pictures/Flags/CornholeFinals.png" title="Cornhole Finals"></img></div>
+  <div class="tabcontent" id="Relay">
+  <p class="sectionheader">Relay Rules</p><img src="C:/Users/Jer/Pictures/Flags/RelayRules.png" title="Relay"></img>
+  <p class="sectionheader">Finals</p><img src="C:/Users/Jer/Pictures/Flags/RelayFinals.png" title="RelayFinals"></img></div>
+  <div class="tabcontent" id="More">
+  <p class="sectionheader">Scoring</p><img src="C:/Users/Jer/Pictures/Flags/Scoring.png" title="Scoring"></img>
+  <p class="sectionheader">Awards</p><img src="C:/Users/Jer/Pictures/Flags/Awards.png" title="Awards"></img>
+  <p class="sectionheader">Beer</p><img src="C:/Users/Jer/Pictures/Flags/Beer.png" title="Beer"></div>
+  <script>
+  function openSection(evt, tabName) {
+     var i, tabcontent, tablinks;
+     tabcontent = document.getElementsByClassName("tabcontent");
+     for (i = 0; i < tabcontent.length; i++) {
+         tabcontent[i].style.display = "none";
+     }
+     tablinks = document.getElementsByClassName("tablinks");
+     for (i = 0; i < tablinks.length; i++) {
+         tablinks[i].className = tablinks[i].className.replace(" active", "");
+     }
+     document.getElementById(tabName).style.display = "block";
+     evt.currentTarget.className += " active";
+  }
+  document.getElementById("defaultOpen").click();
+  </script>
+</body>
+</html>
