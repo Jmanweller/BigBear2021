@@ -130,6 +130,12 @@
   max-width: 1080px;
 }
 
+#daysleft{
+  padding: 0px 0px 0px 0px;
+  margin: 0px;
+  text-align: center;
+}
+
   </style>
   <title></title>
 </head>
@@ -155,7 +161,13 @@
            <strong class="infotitle">LOCATION</strong> 45 Serenity
          </div>
          <div class="infoitem col-sm-3">
-            <strong class="infotitle">COUNTDOWN</strong> 26 Days
+            <strong class="infotitle">COUNTDOWN</strong> <p id="daysleft"></p>
+                <script>
+                var d = new Date();
+                var b = new Date();
+                b.setDate(48);
+                document.getElementById("daysleft").innerHTML = (b-d)/(1000*60*60*24) + " days";
+                </script>
         </div>
       </div>
    </div>
