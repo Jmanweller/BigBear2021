@@ -100,6 +100,38 @@
   font-size: 18px;
   line-height: 30px;
   }
+
+.countrylist:hover .countryflag {
+  opacity: 0.3;
+}
+
+.middle {
+  transition: .2s ease;
+  opacity: 0;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.middle2 {
+  transition: .2s ease;
+  opacity: 0;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  top: 20%;
+}
+
+.countrylist:hover .middle {
+  opacity: 1;
+}
+
   .groups{
   display: inline-block;
   list-style: none;
@@ -107,6 +139,14 @@
   font-size: 18px;
   line-height: 30px;
   }
+
+  .countryflaginfo:hover .countryflag2 {
+  opacity: 0.3;
+}
+
+  .countryflaginfo:hover .middle2 {
+  opacity: 1;
+}
 
   .countryflag{
    width: 95%;
@@ -151,24 +191,6 @@
   max-width: 1080px;
 }
 
-.countrylist:hover .countryflag {
-  opacity: 0.3;
-}
-
-.middle {
-  transition: .2s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.countrylist:hover .middle {
-  opacity: 1;
-}
 
 .gameRules{
   padding-top: 10px;
@@ -432,11 +454,11 @@
   <div class="tabcontent container  container2" id="BeerPong">
   <p class="sectionheader">Groups</p>
   <div class="col-sm-2 groups">
-    <p class="sectionheader2">A</p>
-        <img class="countryflag2" src="Images/IndianFlag.png" title="India">
-        <img class="countryflag2" src="Images/ArgentinaFlag.png" title="Argentina">
-        <img class="countryflag2" src="Images/IrishFlag.png" title="Ireland">
-        <img class="countryflag2" src="Images/SwissFlag.png" title="Switzerland">
+    <p class="sectionheader2">A</p>    
+        <img class="countryflag2" src="Images/IndianFlag.png" title="India">         
+        <img class="countryflag2" src="Images/ArgentinaFlag.png" title="Argentina">        
+        <img class="countryflag2" src="Images/IrishFlag.png" title="Ireland"> 
+        <img class="countryflag2" src="Images/SwissFlag.png" title="Switzerland">   
   </div>
   <div class="col-sm-2 groups">
     <p class="sectionheader2">B</p>
