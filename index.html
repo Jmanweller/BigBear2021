@@ -22,6 +22,8 @@
 
   .imagemain{
    margin: 0px;
+   height: 210px;
+   overflow: hidden;
   }
 
   .imageitem{
@@ -31,8 +33,18 @@
   }
 
   .infobar{  
-   background-color: #fc7031;
-   margin-bottom: 20px;
+   background-color: #8B2130;
+  }
+
+  .navbar{  
+   width:100%;
+   background-color: #dedede;
+   margin-bottom: 5px;
+  }
+
+  .navrow{
+    width:100%;
+   text-align: center;
   }
 
   .infoholder{
@@ -42,17 +54,23 @@
    text-align: center;
   }
 
+    .navholder{
+   display: block;
+   margin: 0 auto;
+   text-align: center;
+  }
+
   .infoitem{
    color: white;
-   font-size: 21px;
+   font-size: 18px;
    text-transform: uppercase;
    text-align: center;
-   padding: 20px 0;
+   padding: 10px 0;
   }
 
   .infotitle{
    color: rgba(255,255,255,.4);
-   font-size: 16px;
+   font-size: 15px;
    text-align: center;
    display: block;
   }
@@ -72,7 +90,7 @@
      transition: 0.3s;
      color: #060606;
      text-align: center;     
-     font-size: 20px;
+     font-size: 16px;
    }
 
   .tab button:hover {
@@ -89,7 +107,7 @@
      display: flex;
      padding: 25px 12px;
      text-align: center;
-     padding-bottom: 40px;
+     padding-bottom: 0px;
      width: 100%;
   }
 
@@ -147,7 +165,7 @@
 }
 
   .countryflag{
-   width: 95%;
+   width: 90%;
    border:1px solid #021a40;
   }
 
@@ -221,182 +239,126 @@
 </head>
 <body>
   <div class="headerbar">
-          <img class="headerimage" src="Images/test.jpg"></div>
      <div class="imagemain row">          
-          <img class="imageitem col-sm-3 padding-0" src="Images/BeerOlympics1.jpg">
-          <img class="imageitem col-sm-3 padding-0" src="Images/WinterOlympics1.jpg">
-          <img class="imageitem col-sm-3 padding-0" src="Images/WinterOlympics2.jpg">
-          <img class="imageitem col-sm-3 padding-0" src="Images/BeerOlympics2.jpg"> 
+          <img class="imageitem col-sm-3 padding-0" src="Images/BeerOlympics2.jpg">
+          <img class="imageitem col-sm-3 padding-0" src="Images/SummerOlympics1.jpg">
+          <img class="imageitem col-sm-3 padding-0" src="Images/SummerOlympics2.jpeg">
+          <img class="imageitem col-sm-3 padding-0" src="Images/BeerOlympics3.jpg"> 
      </div>
    <div class="infobar">
       <div class="infoholder container">
        <div class="row">
          <div class="infoitem col-sm-3">
-            <strong class="infotitle">DATE</strong> 17 Feb
+            <strong class="infotitle">DATE</strong> 25 Sep
          </div>
          <div class="infoitem col-sm-3">
-            <strong class="infotitle">TIME</strong> 1230 PM
+            <strong class="infotitle">TIME</strong> 11:30 AM
          </div>       
          <div class="infoitem col-sm-3">
-           <strong class="infotitle">LOCATION</strong> 45 Serenity
+           <strong class="infotitle">LOCATION</strong> Big Bear
          </div>
          <div class="infoitem col-sm-3">
             <strong class="infotitle">COUNTDOWN</strong> <p id="daysleft"></p>
                 <script>
                 var d = new Date();
-                var b = new Date('02/17/2018');
+                var b = new Date('09/25/2021');
                 document.getElementById("daysleft").innerHTML = Math.ceil((b-d)/(1000*60*60*24)) + " days";
                 </script>
         </div>
       </div>
    </div>
   </div>
-  <div class="tab container">
-    <div class="row">
-      <button class="tablinks col-sm-2" id="defaultOpen" onclick="openSection(event, 'Countries')">Countries</button> 
-      <button class="tablinks col-sm-2" onclick="openSection(event, 'BeerPong')">Beer Pong</button>
-      <button class="tablinks col-sm-2" onclick="openSection(event, 'FlipCup')">Flip Cup</button>
-      <button class="tablinks col-sm-2" onclick="openSection(event, 'Cornhole')">Cornhole</button>
-      <button class="tablinks col-sm-2" onclick="openSection(event, 'Relay')">Relay</button>
-      <button class="tablinks col-sm-2" onclick="openSection(event, 'More')">More</button>
+   <div class="tab headerbar navbar">
+    <div class="navholder container">
+    <div class="row navrow ">
+      <button class="tablinks col-sm-1" id="defaultOpen" onclick="openSection(event, 'Countries')">Countries</button> 
+      <button class="tablinks col-sm-1" onclick="openSection(event, 'FlipCup')">Flip Cup</button>
+      <button class="tablinks col-sm-1" onclick="openSection(event, 'Cornhole')">Cornhole</button>
+      <button class="tablinks col-sm-1" onclick="openSection(event, 'BeerDie')">Beer Die</button>
+      <button class="tablinks col-sm-1" onclick="openSection(event, 'BeerPong')">Beer Pong</button>
+      <button class="tablinks col-sm-1" onclick="openSection(event, 'CornholeDueling')">Cornhole Dueling</button>
+      <button class="tablinks col-sm-1" onclick="openSection(event, 'BeerPongDueling')">Beer Pong Dueling</button>
+      <button class="tablinks col-sm-1" onclick="openSection(event, 'Relay')">Relay</button>
+      <button class="tablinks col-sm-1" onclick="openSection(event, 'Archery')">Archery</button>
+      <button class="tablinks col-sm-1" onclick="openSection(event, 'Track')">Track</button>
+      <button class="tablinks col-sm-1" onclick="openSection(event, 'PoleVault')">Pole Vault</button>
+      <button class="tablinks col-sm-1" onclick="openSection(event, 'More')">Scoring</button>
     </div>
+   </div>
   </div>
+
+
   <div class="tabcontent container" id="Countries">
     <div class="row text-center">
+      <div>
       <div class="col-sm-2 countrylist">
         <div class="eddie">
         <div class="middle">
-            <div class="text">Afghanistan
+            <div class="text">Greece
             </div>
           </div>
-          <img class="countryflag" src="Images/AfghanistanFlag.png" title="Afghanistan"/>
-        </div>
-          
+          <img class="countryflag" src="Images/GreekFlag.png" title="Greece"/>
+        </div>          
         <ul class="liststuff">
-          <li>Brandon Rego</li>
+          <li>Jeremy Manweller</li>
           <li>Omid Karger</li>
+          <li>Alex Zundel</li>
+          <li>Sruthi Nair</li>
         </ul>
       </div>
       <div class="col-sm-2 countrylist">
       <div class="eddie">
-        <img class="countryflag" src="Images/ArgentinaFlag.png" title="Argentina">
+        <img class="countryflag" src="Images/CanadianFlag.png" title="Canada">
         <div class="middle">
-          <div class="text">Argentina</div>
+          <div class="text">Canada</div>
           </div>
           </div>
         <ul class="liststuff">
-          <li>Flo Di Sarli</li>
-          <li>Russ Jones</li>
+          <li>Dozz</li>
+          <li>Matt Farah</li>
+          <li>Wade Fordham</li>
+          <li>Elizabeth Fordham</li>
         </ul>
       </div>     
       <div class="col-sm-2 countrylist">
       <div class="eddie">
-        <img class="countryflag" src="Images/ChineseFlag.png" title="China">
+        <img class="countryflag" src="Images/WelshFlag.png" title="Wales">
         <div class="middle">
-          <div class="text">China</div>
+          <div class="text">Wales</div>
           </div></div>
         <ul class="liststuff">
-          <li>Kevin Quach</li>
-          <li>Vicki Diep</li>
+          <li>Brad Day</li>
+          <li>Chelsea DeGuzman</li>
+          <li>Evan Hill</li>
+          <li>Nicole Beaumont</li>
         </ul>
       </div>
       <div class="col-sm-2 countrylist">
       <div class="eddie">
-        <img class="countryflag" src="Images/DenmarkFlag.png" title="Denmark">
+        <img class="countryflag" src="Images/AustralianFlag.png" title="Australia">
         <div class="middle">
-          <div class="text">Denmark</div>
+          <div class="text">Australia</div>
           </div></div>
         <ul class="liststuff">
-          <li>Nathan Stokes</li>
-          <li>Valerie Stokes</li>
+          <li>Kayla Hackett</li>
+          <li>Sam Thompson</li>
+          <li>Cristina </li>
+          <li>Brandon</li>
         </ul>
-      </div>  
-      <div class="col-sm-2 countrylist">
-      <div class="eddie">
-        <img class="countryflag" src="Images/EgyptianFlag.png" title="Egypt">
-        <div class="middle">
-          <div class="text">Egypt</div>
-          </div></div>
-        <ul class="liststuff">
-          <li>Jason Claiborne</li>
-          <li>Justin Manweller</li>
-        </ul>
-      </div>
-      <div class="col-sm-2 countrylist">
-      <div class="eddie">
-        <img class="countryflag" src="Images/EnglishFlag.png" title="England">
-        <div class="middle">
-          <div class="text">England</div>
-          </div></div>
-        <ul class="liststuff">
-          <li>Heather DuValle</li>
-          <li>Reece Arthur</li>
-        </ul>
-      </div>
+      </div> 
+    </div>
+      <div>
       <div class="col-sm-2 countrylist">
       <div class="eddie">
         <img class="countryflag" src="Images/GermanFlag.png" title="Germany">
         <div class="middle">
           <div class="text">Germany</div>
           </div></div>
-        <ul class="liststuff">          
-          <li>Camryn Krause</li>
-          <li>Rob Diny</li>
-        </ul>
-      </div>
-      <div class="col-sm-2 countrylist">
-      <div class="eddie">
-        <img class="countryflag" src="Images/GreenlandFlag.png" title="Greenland">
-        <div class="middle">
-          <div class="text">Greenland</div>
-          </div></div>
         <ul class="liststuff">
-          <li>David Holloway</li>
-          <li>Ulysses Quintanilla</li>
-        </ul>
-      </div>      
-       <div class="col-sm-2 countrylist">
-       <div class="eddie">
-        <img class="countryflag" src="Images/IrishFlag.png" title="Ireland">
-        <div class="middle">
-          <div class="text">Ireland</div>
-          </div></div>
-        <ul class="liststuff">
-          <li>Jeremy Manweller</li>
-          <li>Sruthi Nair</li>
-        </ul>
-      </div>
-      <div class="col-sm-2 countrylist">
-      <div class="eddie">
-        <img class="countryflag" src="Images/ItalianFlag.png" title="Italy">
-        <div class="middle">
-          <div class="text">Italy</div>
-          </div></div>
-        <ul class="liststuff">
-          <li>Brittany Traufler</li>
-          <li>Diego Gomez</li>
-        </ul>
-      </div>
-      <div class="col-sm-2 countrylist">
-      <div class="eddie">
-        <img class="countryflag" src="Images/JapaneseFlag.png" title="Japan">
-        <div class="middle">
-          <div class="text">Japan</div>
-          </div></div>
-        <ul class="liststuff">
-          <li>Kris Martin</li>
-          <li>Lexa Kallasorg</li>
-        </ul>
-      </div>
-      <div class="col-sm-2 countrylist">
-      <div class="eddie">
-        <img class="countryflag" src="Images/KazakhstanFlag.png" title="Kazakhstan">
-        <div class="middle">
-          <div class="text">Kazakhstan</div>
-          </div></div>
-        <ul class="liststuff">          
-          <li>Dallas Butler</li>
-          <li>Nick Caputo</li>
+          <li>Rob Diny </li>
+          <li>Zach Faro</li>
+          <li>Tyler Ferris</li>
+          <li>Camryn Ferris</li>
         </ul>
       </div>
       <div class="col-sm-2 countrylist">
@@ -406,332 +368,128 @@
           <div class="text">Mexico</div>
           </div></div>
         <ul class="liststuff">
-          <li>Eddie Zamora</li>
           <li>Travis Clifford</li>
+          <li>Yukiko Keeks</li>
+          <li>Eddie Zamora</li>
+          <li>Danny</li>
         </ul>
-      </div>          
+      </div>
       <div class="col-sm-2 countrylist">
       <div class="eddie">
-        <img class="countryflag" src="Images/SpanishFlag.png" title="Spain">
+        <img class="countryflag" src="Images/JapaneseFlag.png" title="Japan">
         <div class="middle">
-          <div class="text">Spain</div>
+          <div class="text">Japan</div>
           </div></div>
         <ul class="liststuff">
-          <li>Raymond Vasquez</li>          
-          <li>Rick Venzor</li>
+          <li>Dallas Butler</li>
+          <li>Aya</li>
+          <li>Nick Caputo</li>
+          <li>Lauren Karwel</li>
         </ul>
       </div>
       <div class="col-sm-2 countrylist">
       <div class="eddie">
-        <img class="countryflag" src="Images/RussianFlag.png" title="Russia">
+        <img class="countryflag" src="Images/GreenlandFlag.png" title="Greenland">
         <div class="middle">
-          <div class="text">Russia</div>
+          <div class="text">Greenland</div>
           </div></div>
         <ul class="liststuff">
-          <li>Conrad Neill</li>
-          <li>Matt Farah</li>
+          <li>Brittany Traufler</li>
+          <li>Wyatt Kiedrowski</li>
+          <li>Ulysses Quintanilla</li>
+          <li>Nik Peter</li>
         </ul>
       </div>
-      <div class="col-sm-2 countrylist">
-      <div class="eddie">
-        <img class="countryflag" src="Images/ScottishFlag.png" title="Scotland">
-        <div class="middle">
-          <div class="text">Scotland</div>
-          </div>
-          </div>
-        <ul class="liststuff">
-          <li>EJ McKay</li>
-          <li>TJ McCabe</li>
-        </ul>
-      </div>
-      <div class="col-sm-2 countrylist">
-      <div class="eddie">
-        <img class="countryflag" src="Images/SouthKoreanFlag.png" title="South Korea">
-        <div class="middle">
-          <div class="text">S. Korea</div>
-          </div>
-          </div>
-        <ul class="liststuff">
-          <li>Kevin Tran</li>
-          <li>Tony Nguyen</li>
-        </ul>
-      </div>
-      <div class="col-sm-2 countrylist">
-      <div class="eddie">
-        <img class="countryflag" src="Images/SwissFlag.png" title="Switzerland">
-        <div class="middle">
-          <div class="text">Switzerland</div>
-          </div>
-          </div>
-        <ul class="liststuff">
-          <li>Kayla Hackett</li>
-          <li>Sam Thompson</li>
-        </ul>
-        </div>    
-      </div>
-      <div class="col-sm-2 countrylist">
-      <div class="eddie">
-        <img class="countryflag" src="Images/AmericanFlag.png" title="USA">
-        <div class="middle">
-          <div class="text">USA</div>
-          </div>
-          </div>
-        <ul class="liststuff">
-          <li>Alex Zundel</li>
-          <li>Chance Munger</li>
-        </ul>      
     </div>
-      <div class="col-sm-2 countrylist">
-      <div class="eddie">
-        <img class="countryflag" src="Images/WelshFlag.png" title="Wales">
-        <div class="middle">
-          <div class="text">Wales</div>
-          </div>
-          </div>
-        <ul class="liststuff">
-          <li>Brad Day</li>
-          <li>Evan Hill</li>
-        </ul>
-      </div>      
   </div>
-  <div class="tabcontent container  container2" id="BeerPong">
-  <p class="sectionheader">Groups</p>
-  <div class="col-sm-2 groups">
-    <p class="sectionheader2">A</p>
-    <div class="eddie">
-        <img class="countryflag2" src="Images/EnglishFlag.png" title="England">
-        <div class="middle2">
-        <div class="text2">Heather<br>Reece</div>
-          </div>
-          </div>
-          <div class="eddie">
-        <img class="countryflag2" src="Images/ArgentinaFlag.png" title="Argentina">
-        <div class="middle2">
-        <div class="text2">Flo<br>Russ</div>
-          </div>
-          </div>
-          <div class="eddie">
-        <img class="countryflag2" src="Images/IrishFlag.png" title="Ireland">
-        <div class="middle2">
-        <div class="text2">Jer<br>Sruthi</div>
-          </div>
-          </div> 
-          <div class="eddie">
-        <img class="countryflag2" src="Images/SwissFlag.png" title="Switzerland">
-        <div class="middle2">
-        <div class="text2">Kayla<br>Sam</div>
-          </div>
-          </div> 
-  </div>
-  <div class="col-sm-2 groups">
-    <p class="sectionheader2">B</p>
-    <div class="eddie">
-        <img class="countryflag2" src="Images/WelshFlag.png" title="Wales">
-        <div class="middle2">
-        <div class="text2">Brad<br>Evan</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/MexicanFlag.png" title="Mexico">
-        <div class="middle2">
-        <div class="text2">Eddie<br>Travis</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/GreenlandFlag.png" title="Greenland">
-        <div class="middle2">
-        <div class="text2">David<br>Ulysses</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/ChineseFlag.png" title="China">
-        <div class="middle2">
-        <div class="text2">Kevin<br>Vicki</div>
-        </div>
-        </div>
-  </div>
-  <div class="col-sm-2 groups">
-    <p class="sectionheader2">C</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/AmericanFlag.png" title="USA">
-        <div class="middle2">
-        <div class="text2">Alex<br>Chance</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/ItalianFlag.png" title="Italy">
-        <div class="middle2">
-        <div class="text2">Brittany<br>Diego</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/EgyptianFlag.png" title="Egypt">
-        <div class="middle2">
-        <div class="text2">Clay<br>Dozz</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/ScottishFlag.png" title="Scotland">
-        <div class="middle2">
-        <div class="text2">EJ<br>TJ</div>
-        </div>
-        </div>
-  </div>
-  <div class="col-sm-2 groups">
-    <p class="sectionheader2">D</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/AfghanistanFlag.png" title="Afghanistan">
-        <div class="middle2">
-        <div class="text2">Brandon<br>Omid</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/DenmarkFlag.png" title="Denmark">
-        <div class="middle2">
-        <div class="text2">Nathan<br>Val</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/GermanFlag.png" title="Germany">
-        <div class="middle2">
-        <div class="text2">Camryn<br>Rob</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/JapaneseFlag.png" title="Japan">
-        <div class="middle2">
-        <div class="text2">Kris<br>Lexa</div>
-        </div>
-        </div>
-  </div>
-  <div class="col-sm-2 groups">
-    <p class="sectionheader2">E</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/KazakhstanFlag.png" title="Kazakhstan">
-        <div class="middle2">
-        <div class="text2">Dallas<br>Nick</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/SouthKoreanFlag.png" title="South Korea">
-        <div class="middle2">
-        <div class="text2">Kevin<br>Tony</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/SpanishFlag.png" title="Spain">
-        <div class="middle2">
-        <div class="text2">Raymond<br>Rick</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/RussianFlag.png" title="Russia">
-        <div class="middle2">
-        <div class="text2">Conrad<br>Matt</div>
-        </div>
-        </div>
-  </div>
-  <p class="sectionheader">Drinking Rules - Group Stage</p><img class="tabrules" src="Images/BeerPongGroups.png" title="Beer Pong Groups">
-  <p class="sectionheader gameRules">Game Rules</p><img class="tabrules" src="Images/BeerPongRules.png" title="Beer Pong">
-  <p class="sectionheader">Drinking Rules - Final Stage</p><img class="tabrules" src="Images/BeerPongFinals.png" title="Beer Pong Finals"></div>
+ </div>
 
-  <div class="tabcontent container container2" id="FlipCup">
-     <p class="sectionheader">Groups</p>
+
+<div class="tabcontent container  container2" id="BeerPong">
+  <p class="sectionheader">Teams</p>
+<div>
   <div class="col-sm-2 groups">
-    <p class="sectionheader2">A</p>
+    <p class="sectionheader2">Greece</p>
         <div class="eddie">
-        <img class="countryflag2" src="Images/ChineseFlag.png" title="China">
+        <img class="countryflag2" src="Images/GreekFlag.png" title="Greece">
         <div class="middle2">
-        <div class="text2">Kevin<br>Vicki</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/ArgentinaFlag.png" title="Argentina">
-        <div class="middle2">
-        <div class="text2">Flo<br>Russ</div>
-          </div>
-          </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/GermanFlag.png" title="Germany">
-        <div class="middle2">
-        <div class="text2">Camryn<br>Rob</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/ScottishFlag.png" title="Scotland">
-        <div class="middle2">
-        <div class="text2">EJ<br>TJ</div>
-        </div>
-        </div>
-  </div>
-  <div class="col-sm-2 groups">
-    <p class="sectionheader2">B</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/RussianFlag.png" title="Russia">
-        <div class="middle2">
-        <div class="text2">Conrad<br>Matt</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/SwissFlag.png" title="Switzerland">
-        <div class="middle2">
-        <div class="text2">Kayla<br>Sam</div>
+        <div class="text2">Jer<br>Omid</div>
           </div>
           </div> 
-        <div class="eddie">
-        <img class="countryflag2" src="Images/AmericanFlag.png" title="USA">
+          <div class="eddie">
+        <img class="countryflag2" src="Images/GreekFlag.png" title="Greece">
         <div class="middle2">
-        <div class="text2">Alex<br>Chance</div>
+        <div class="text2">Sruthi<br>Alex</div>
+          </div>
+          </div> 
+  </div>
+  <div class="col-sm-2 groups">
+    <p class="sectionheader2">Canada</p>
+        <div class="eddie">
+        <img class="countryflag2" src="Images/GreenlandFlag.png" title="Canada">
+        <div class="middle2">
+        <div class="text2">Matt<br>Wade</div>
         </div>
         </div>
         <div class="eddie">
-        <img class="countryflag2" src="Images/DenmarkFlag.png" title="Denmark">
+        <img class="countryflag2" src="Images/GreenlandFlag.png" title="Canada">
         <div class="middle2">
-        <div class="text2">Nathan<br>Val</div>
+        <div class="text2">Dozz<br>Elizabeth</div>
         </div>
         </div>
   </div>
+
   <div class="col-sm-2 groups">
-    <p class="sectionheader2">C</p>
+    <p class="sectionheader2">Wales</p>
         <div class="eddie">
-        <img class="countryflag2" src="Images/ItalianFlag.png" title="Italy">
+        <img class="countryflag2" src="Images/WelshFlag.png" title="Wales">
         <div class="middle2">
-        <div class="text2">Brittany<br>Diego</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/SouthKoreanFlag.png" title="South Korea">
-        <div class="middle2">
-        <div class="text2">Kevin<br>Tony</div>
+        <div class="text2">Brad<br>Chelsea</div>
         </div>
         </div>
         <div class="eddie">
         <img class="countryflag2" src="Images/WelshFlag.png" title="Wales">
         <div class="middle2">
-        <div class="text2">Brad<br>Evan</div>
+        <div class="text2">Evan<br>Nicole</div>
         </div>
         </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/EnglishFlag.png" title="England">
-        <div class="middle2">
-        <div class="text2">Heather<br>Reece</div>
-          </div>
-          </div>
   </div>
+
   <div class="col-sm-2 groups">
-    <p class="sectionheader2">D</p>
+    <p class="sectionheader2">Germany</p>
         <div class="eddie">
-        <img class="countryflag2" src="Images/KazakhstanFlag.png" title="Kazakhstan">
+        <img class="countryflag2" src="Images/GermanFlag.png" title="Germany">
         <div class="middle2">
-        <div class="text2">Dallas<br>Nick</div>
+        <div class="text2">Camryn<br>Tyler</div>
         </div>
         </div>
         <div class="eddie">
-        <img class="countryflag2" src="Images/IrishFlag.png" title="Ireland">
+        <img class="countryflag2" src="Images/GermanFlag.png" title="Germany">
         <div class="middle2">
-        <div class="text2">Jer<br>Sruthi</div>
+        <div class="text2">Zach<br>Rob</div>
         </div>
-        </div> 
+        </div>
+  </div>
+</div>
+<div>
+  <div class="col-sm-2 groups">
+    <p class="sectionheader2">Australia</p>
+        <div class="eddie">
+        <img class="countryflag2" src="Images/AustralianFlag.png" title="Australia">
+        <div class="middle2">
+        <div class="text2">Sam<br>Kayla</div>
+        </div>
+        </div>
+        <div class="eddie">
+        <img class="countryflag2" src="Images/AustralianFlag.png" title="Australia">
+        <div class="middle2">
+        <div class="text2">Cristina<br>Brandon</div>
+        </div>
+        </div>
+  </div>
+
+    <div class="col-sm-2 groups">
+    <p class="sectionheader2">Mexico</p>
         <div class="eddie">
         <img class="countryflag2" src="Images/MexicanFlag.png" title="Mexico">
         <div class="middle2">
@@ -739,41 +497,137 @@
         </div>
         </div>
         <div class="eddie">
-        <img class="countryflag2" src="Images/AfghanistanFlag.png" title="Afghanistan">
+        <img class="countryflag2" src="Images/MexicanFlag.png" title="Mexico">
         <div class="middle2">
-        <div class="text2">Brandon<br>Omid</div>
+        <div class="text2">Danny<br>Yukiko</div>
         </div>
         </div>
   </div>
-  <div class="col-sm-2 groups">
-    <p class="sectionheader2">E</p>
+
+    <div class="col-sm-2 groups">
+    <p class="sectionheader2">Japan</p>
         <div class="eddie">
         <img class="countryflag2" src="Images/JapaneseFlag.png" title="Japan">
         <div class="middle2">
-        <div class="text2">Kris<br>Lexa</div>
+        <div class="text2">Dallas<br>Aya</div>
+        </div>
+        </div>
+        <div class="eddie">
+        <img class="countryflag2" src="Images/JapaneseFlag.png" title="Japan">
+        <div class="middle2">
+        <div class="text2">Nick<br>Lauren</div>
+        </div>
+        </div>
+  </div>
+
+    <div class="col-sm-2 groups">
+    <p class="sectionheader2">Greenland</p>
+        <div class="eddie">
+        <img class="countryflag2" src="Images/GreenlandFlag.png" title="Greenland">
+        <div class="middle2">
+        <div class="text2">Brittany<br>Wyatt</div>
         </div>
         </div>
         <div class="eddie">
         <img class="countryflag2" src="Images/GreenlandFlag.png" title="Greenland">
         <div class="middle2">
-        <div class="text2">David<br>Ulysses</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/EgyptianFlag.png" title="Egypt">
-        <div class="middle2">
-        <div class="text2">Clay<br>Dozz</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/SpanishFlag.png" title="Spain">
-        <div class="middle2">
-        <div class="text2">Raymond<br>Rick</div>
+        <div class="text2">David<br>Nik</div>
         </div>
         </div>
   </div>
+</div>
+
+  <p class="sectionheader gameRules">Game Rules</p><img class="tabrules" src="Images/BeerPongRules.png" title="Beer Pong">
+</div>
+
+
+  <div class="tabcontent container container2" id="BeerDie">
+     <p class="sectionheader">Teams</p>
+<div>
+  <div class="col-sm-2 groups">
+    <p class="sectionheader2">Greece</p>
+        <div class="eddie">
+        <img class="countryflag2" src="Images/GreekFlag.png" title="Greece">
+        <div class="middle2">
+        <div class="text2">Jer<br>Omid</div>
+        </div>
+    </div> 
+  </div>
+  <div class="col-sm-2 groups">
+    <p class="sectionheader2">Canada</p>
+        <div class="eddie">
+        <img class="countryflag2" src="Images/GreenlandFlag.png" title="Canada">
+        <div class="middle2">
+        <div class="text2">Matt<br>Wade</div>
+        </div>
+        </div>
+  </div>
+
+  <div class="col-sm-2 groups">
+    <p class="sectionheader2">Wales</p>
+        <div class="eddie">
+        <img class="countryflag2" src="Images/WelshFlag.png" title="Wales">
+        <div class="middle2">
+        <div class="text2">Brad<br>Chelsea</div>
+        </div>
+        </div>
+  </div>
+
+  <div class="col-sm-2 groups">
+    <p class="sectionheader2">Germany</p>
+        <div class="eddie">
+        <img class="countryflag2" src="Images/GermanFlag.png" title="Germany">
+        <div class="middle2">
+        <div class="text2">Camryn<br>Tyler</div>
+        </div>
+        </div>
+  </div>
+</div>
+<div>
+  <div class="col-sm-2 groups">
+    <p class="sectionheader2">Australia</p>
+        <div class="eddie">
+        <img class="countryflag2" src="Images/AustralianFlag.png" title="Australia">
+        <div class="middle2">
+        <div class="text2">Sam<br>Kayla</div>
+        </div>
+        </div>
+  </div>
+
+    <div class="col-sm-2 groups">
+    <p class="sectionheader2">Mexico</p>
+        <div class="eddie">
+        <img class="countryflag2" src="Images/MexicanFlag.png" title="Mexico">
+        <div class="middle2">
+        <div class="text2">Eddie<br>Travis</div>
+        </div>
+        </div>
+  </div>
+
+    <div class="col-sm-2 groups">
+    <p class="sectionheader2">Japan</p>
+        <div class="eddie">
+        <img class="countryflag2" src="Images/JapaneseFlag.png" title="Japan">
+        <div class="middle2">
+        <div class="text2">Dallas<br>Nack</div>
+        </div>
+        </div>
+  </div>
+
+    <div class="col-sm-2 groups">
+    <p class="sectionheader2">Greenland</p>
+        <div class="eddie">
+        <img class="countryflag2" src="Images/GreenlandFlag.png" title="Greenland">
+        <div class="middle2">
+        <div class="text2">Ulysses<br>Wyatt</div>
+        </div>
+        </div>
+  </div>
+</div>
   <p class="sectionheader gameRules">Game Rules</p><img class="tabrules" src="Images/FlipCupRules.png" title="Flip Cup"></img>
-  <p class="sectionheader">Finals</p><img class="tabrules" src="Images/FlipCupFinals.png" title="Flip Cup Finals"></img></div>
+</div>
+
+
   <div class="tabcontent container container2" id="Cornhole">
      <p class="sectionheader">Groups</p>
   <div class="col-sm-2 groups">
