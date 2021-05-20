@@ -10,7 +10,8 @@
   }
   
    .container2  {
-   max-width: 1280px
+   max-width: 1280px;
+   height: auto;
   }
 
   .headerimage{
@@ -21,15 +22,21 @@
   }
 
   .imagemain{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   align-items: flex-start;
    margin: 0px;
-   height: 210px;
+   height: 215px;
    overflow: hidden;
   }
 
   .imageitem{
+    display: inline-flex;
    filter: grayscale(100%);
+   min-height: 210px;
    height: 100%;
-   width: 100%;
+   object-fit: cover;
   }
 
   .infobar{  
@@ -40,6 +47,7 @@
    width:100%;
    background-color: #dedede;
    margin-bottom: 5px;
+  height: 40px;
   }
 
   .navrow{
@@ -58,6 +66,7 @@
    display: block;
    margin: 0 auto;
    text-align: center;
+    width: 1080px;
   }
 
   .infoitem{
@@ -181,7 +190,8 @@
   }
    .sectionheader2{
    font-size: 20px;
-   font-weight: bold;  
+   font-weight: bold;
+  margin-bottom: 10px;
   }
 
   .liststuff{
@@ -221,6 +231,206 @@
   line-height: 20px;
 }
 
+.eventtable{
+  display: grid;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  width: 100%;
+  padding: 0px 0px 00px 0px;
+  grid-template-columns: 10% 18% 18% 11% 11% 21% 11%;
+  grid-template-areas: "r1 r2 r3 r4 r5 s2 r6";
+}
+
+.tableheader{
+  display: inline-block;
+  position: relative;
+  padding: 0px 0px 10px 0px;
+  float: left;
+}
+
+.tablerow{
+    border-radius: 10px 10px 10px 10px;
+    border:1px solid #555;
+    margin-bottom: -1px;
+    width: 100%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    float: left;
+    position: relative;
+    background-color: #f4f4f4;
+    display: grid;
+    grid-template-columns: 10% 18% 18% 11% 11% 21% 11%;
+    grid-template-areas: "r1 r2 r3 r4 r5 s2 r6";
+    text-align: center;
+}
+
+.r1 {
+    grid-area: r1;
+}
+
+.r2 {
+    grid-area: r2;
+}
+.r3 {
+    grid-area: r3;
+}
+
+.r4 {
+    grid-area: r4;
+}
+.r5 {
+    grid-area: r5;
+}
+
+.r6 {
+    grid-area: r6;
+}
+
+.s2{
+  grid-area: s2;
+}
+
+.tablesection{
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  padding-top:14px;
+  position: relative;
+  min-height: 1px;
+  float: left;
+  color: #222;
+}
+.pad{
+  padding-top:10px;
+  padding-bottom:10px;
+}
+.padup{
+  padding-top:20px;
+}
+
+.medalimage{
+ padding: 4px 4px 4px 4px;
+  height: 50px;
+  width: auto;
+ display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.championrow{
+    background-color: #bbb;
+}
+
+.ScoringTable{
+  display: grid;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  width: 40%;
+  padding: 0px 0px 0px 0px;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-areas: "r1 r2 r3 r4 r5";
+}
+.scoringtablesection{
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  padding-top:8px;
+  padding-bottom:8px;
+  position: relative;
+  min-height: 1px;
+  float: left;
+  color: #222;
+}
+.scoringtablerow{
+    border-radius: 10px 10px 10px 10px;
+    border:1px solid #555;
+    margin-bottom: -1px;
+    width: 40%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    background-color: #f4f4f4;
+    display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-areas: "r1 r2 r3 r4 r5";
+    text-align: center;
+}
+
+.placementrow{
+  width:80%;
+  margin-left:auto;
+  margin-right:auto;
+  padding-bottom: 20px;
+}
+
+.PlacementTable{
+  display: grid;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  width: 40%;
+  padding: 0px 0px 0px 0px;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: "r1 r2";
+}
+
+.placementtablesection{
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  padding-top:8px;
+  padding-bottom:8px;
+  position: relative;
+  min-height: 1px;
+  float: left;
+  color: #222;
+}
+.placementtablerow{
+    border-radius: 10px 10px 10px 10px;
+    border:1px solid #555;
+    margin-bottom: -1px;
+    width: 40%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    background-color: #f4f4f4;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: "r1 r2";
+    text-align: center;
+}
+
+.scheduletable{
+  border-radius: 10px 10px 10px 10px;
+    border:1px solid #555;
+    margin-bottom: -1px;
+    width: 30%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    background-color: #f4f4f4;
+    display: grid;
+    text-align: center;
+}
+
+.othertable{
+  border-radius: 10px 10px 10px 10px;
+    border:1px solid #555;
+    margin-bottom: -1px;
+    width: 65%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    background-color: #f4f4f4;
+    display: grid;
+    text-align: center;
+}
 
 #daysleft{
   padding: 0px 0px 0px 0px;
@@ -234,16 +444,25 @@
   text-align: center;
   display: block;
 }
-  </style>
-  <title></title>
+</style>
+
+<title>Big Bear 2021</title>
 </head>
 <body>
   <div class="headerbar">
      <div class="imagemain row">          
-          <img class="imageitem col-sm-3 padding-0" src="Images/BeerOlympics2.jpg">
-          <img class="imageitem col-sm-3 padding-0" src="Images/SummerOlympics1.jpg">
-          <img class="imageitem col-sm-3 padding-0" src="Images/SummerOlympics2.jpeg">
-          <img class="imageitem col-sm-3 padding-0" src="Images/BeerOlympics3.jpg"> 
+          <img class="imageitem padding-0" src="Images/SummerOlympics8.jpg">
+          <img class="imageitem padding-0" src="Images/SummerOlympics5.jpg">
+          <img class="imageitem padding-0" src="Images/SummerOlympics1.jpg">
+          <img class="imageitem padding-0" src="Images/SummerOlympics4.jpg"> 
+          <img class="imageitem padding-0" src="Images/BeerOlympics3.jpg">
+          <img class="imageitem padding-0" src="Images/SummerOlympics2.jpeg">
+          <img class="imageitem padding-0" src="Images/BeerOlympics2.jpg">
+          <img class="imageitem padding-0" src="Images/SummerOlympics6.jpg">
+          <img class="imageitem padding-0" src="Images/SummerOlympics9.jpg">
+          <img class="imageitem padding-0" src="Images/SummerOlympics10.jpg">
+          <img class="imageitem padding-0" src="Images/SummerOlympics7.jpg">
+          <img class="imageitem padding-0" src="Images/SummerOlympics11.jpg">
      </div>
    <div class="infobar">
       <div class="infoholder container">
@@ -252,7 +471,7 @@
             <strong class="infotitle">DATE</strong> 25 Sep
          </div>
          <div class="infoitem col-sm-3">
-            <strong class="infotitle">TIME</strong> 11:30 AM
+            <strong class="infotitle">START TIME</strong> 11:00 AM
          </div>       
          <div class="infoitem col-sm-3">
            <strong class="infotitle">LOCATION</strong> Big Bear
@@ -271,39 +490,29 @@
    <div class="tab headerbar navbar">
     <div class="navholder container">
     <div class="row navrow ">
-      <button class="tablinks col-sm-1" id="defaultOpen" onclick="openSection(event, 'Countries')">Countries</button> 
-      <button class="tablinks col-sm-1" onclick="openSection(event, 'FlipCup')">Flip Cup</button>
-      <button class="tablinks col-sm-1" onclick="openSection(event, 'Cornhole')">Cornhole</button>
-      <button class="tablinks col-sm-1" onclick="openSection(event, 'BeerDie')">Beer Die</button>
-      <button class="tablinks col-sm-1" onclick="openSection(event, 'BeerPong')">Beer Pong</button>
-      <button class="tablinks col-sm-1" onclick="openSection(event, 'CornholeDueling')">Cornhole Dueling</button>
-      <button class="tablinks col-sm-1" onclick="openSection(event, 'BeerPongDueling')">Beer Pong Dueling</button>
-      <button class="tablinks col-sm-1" onclick="openSection(event, 'Relay')">Relay</button>
-      <button class="tablinks col-sm-1" onclick="openSection(event, 'Archery')">Archery</button>
-      <button class="tablinks col-sm-1" onclick="openSection(event, 'Track')">Track</button>
-      <button class="tablinks col-sm-1" onclick="openSection(event, 'PoleVault')">Pole Vault</button>
-      <button class="tablinks col-sm-1" onclick="openSection(event, 'More')">Scoring</button>
+      <button class="tablinks col-sm-2" id="defaultOpen" onclick="openSection(event, 'Countries')">Countries</button> 
+      <button class="tablinks col-sm-2" onclick="openSection(event, 'Events')">Events</button>
+      <button class="tablinks col-sm-2" onclick="openSection(event, 'Scoring')">Scoring</button>
+      <button class="tablinks col-sm-2" onclick="openSection(event, 'Schedule')">Schedule</button>
+      <button class="tablinks col-sm-2" onclick="openSection(event, 'Other')">Other</button>
     </div>
    </div>
   </div>
-
 
   <div class="tabcontent container" id="Countries">
     <div class="row text-center">
       <div>
       <div class="col-sm-2 countrylist">
-        <div class="eddie">
+      <div class="eddie">
+        <img class="countryflag" src="Images/AustralianFlag.png" title="Australia">
         <div class="middle">
-            <div class="text">Greece
-            </div>
-          </div>
-          <img class="countryflag" src="Images/GreekFlag.png" title="Greece"/>
-        </div>          
+          <div class="text">Australia</div>
+          </div></div>
         <ul class="liststuff">
-          <li>Jeremy Manweller</li>
-          <li>Omid Karger</li>
-          <li>Alex Zundel</li>
-          <li>Sruthi Nair</li>
+          <li>Brandon Daniels</li>
+          <li>Cristina Collins</li>
+          <li>Kayla Hackett</li>
+          <li>Sam Thompson</li>
         </ul>
       </div>
       <div class="col-sm-2 countrylist">
@@ -319,7 +528,75 @@
           <li>Wade Fordham</li>
           <li>Elizabeth Fordham</li>
         </ul>
-      </div>     
+      </div>  
+      <div class="col-sm-2 countrylist">
+      <div class="eddie">
+        <img class="countryflag" src="Images/GermanFlag.png" title="Germany">
+        <div class="middle">
+          <div class="text">Germany</div>
+          </div></div>
+        <ul class="liststuff">
+          <li>Camryn Ferris</li>
+          <li>Tyler Ferris</li>
+          <li>Rob Diny </li>
+          <li>Zach Ferraro</li>
+        </ul>
+      </div>    
+      <div class="col-sm-2 countrylist">
+      <div class="eddie">
+        <img class="countryflag" src="Images/SpartanFlag.png" title="Greece">
+        <div class="middle">
+          <div class="text">Greece</div>
+          </div>
+          </div>
+        <ul class="liststuff">
+          <li>Alexander Zundel</li>
+          <li>Jeremy Manweller</li>
+          <li>Omid Karger</li>
+          <li>Sruthi Nair</li>
+        </ul>
+      </div>
+      </div>
+      <div>
+      <div class="col-sm-2 countrylist">
+      <div class="eddie">
+        <img class="countryflag" src="Images/JapaneseFlag.png" title="Japan">
+        <div class="middle">
+          <div class="text">Japan</div>
+          </div></div>
+        <ul class="liststuff">
+          <li>Ayae Wada</li>
+          <li>Dallas Butler</li>
+          <li>Nick Caputo</li>
+          <li>Lauren Karwel</li>
+        </ul>
+      </div>
+      <div class="col-sm-2 countrylist">
+      <div class="eddie">
+        <img class="countryflag" src="Images/MexicanFlag.png" title="Mexico">
+        <div class="middle">
+          <div class="text">Mexico</div>
+          </div></div>
+        <ul class="liststuff">
+          <li>Eddie Zamora</li>
+          <li>Danny Robles</li>
+          <li>Travis Clifford</li>
+          <li>Yukiko Sonoyama</li>
+        </ul>
+      </div>
+      <div class="col-sm-2 countrylist">
+      <div class="eddie">
+        <img class="countryflag" src="Images/TBDFlag.png" title="TBD">
+        <div class="middle">
+          <div class="text">TBD</div>
+          </div></div>
+        <ul class="liststuff">
+          <li>Brittany Traufler</li>
+          <li>Wyatt Kiedrowski</li>
+          <li>Nik Peter</li>
+          <li>Ulysses Quintanilla</li>
+        </ul>
+      </div>
       <div class="col-sm-2 countrylist">
       <div class="eddie">
         <img class="countryflag" src="Images/WelshFlag.png" title="Wales">
@@ -333,447 +610,331 @@
           <li>Nicole Beaumont</li>
         </ul>
       </div>
-      <div class="col-sm-2 countrylist">
-      <div class="eddie">
-        <img class="countryflag" src="Images/AustralianFlag.png" title="Australia">
-        <div class="middle">
-          <div class="text">Australia</div>
-          </div></div>
-        <ul class="liststuff">
-          <li>Kayla Hackett</li>
-          <li>Sam Thompson</li>
-          <li>Cristina </li>
-          <li>Brandon</li>
-        </ul>
-      </div> 
     </div>
       <div>
-      <div class="col-sm-2 countrylist">
-      <div class="eddie">
-        <img class="countryflag" src="Images/GermanFlag.png" title="Germany">
-        <div class="middle">
-          <div class="text">Germany</div>
-          </div></div>
-        <ul class="liststuff">
-          <li>Rob Diny </li>
-          <li>Zach Faro</li>
-          <li>Tyler Ferris</li>
-          <li>Camryn Ferris</li>
-        </ul>
-      </div>
-      <div class="col-sm-2 countrylist">
-      <div class="eddie">
-        <img class="countryflag" src="Images/MexicanFlag.png" title="Mexico">
-        <div class="middle">
-          <div class="text">Mexico</div>
-          </div></div>
-        <ul class="liststuff">
-          <li>Travis Clifford</li>
-          <li>Yukiko Keeks</li>
-          <li>Eddie Zamora</li>
-          <li>Danny</li>
-        </ul>
-      </div>
-      <div class="col-sm-2 countrylist">
-      <div class="eddie">
-        <img class="countryflag" src="Images/JapaneseFlag.png" title="Japan">
-        <div class="middle">
-          <div class="text">Japan</div>
-          </div></div>
-        <ul class="liststuff">
-          <li>Dallas Butler</li>
-          <li>Aya</li>
-          <li>Nick Caputo</li>
-          <li>Lauren Karwel</li>
-        </ul>
-      </div>
-      <div class="col-sm-2 countrylist">
-      <div class="eddie">
-        <img class="countryflag" src="Images/GreenlandFlag.png" title="Greenland">
-        <div class="middle">
-          <div class="text">Greenland</div>
-          </div></div>
-        <ul class="liststuff">
-          <li>Brittany Traufler</li>
-          <li>Wyatt Kiedrowski</li>
-          <li>Ulysses Quintanilla</li>
-          <li>Nik Peter</li>
-        </ul>
-      </div>
     </div>
   </div>
  </div>
 
-
-<div class="tabcontent container  container2" id="BeerPong">
-  <p class="sectionheader">Teams</p>
-<div>
-  <div class="col-sm-2 groups">
-    <p class="sectionheader2">Greece</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/GreekFlag.png" title="Greece">
-        <div class="middle2">
-        <div class="text2">Jer<br>Omid</div>
-          </div>
-          </div> 
-          <div class="eddie">
-        <img class="countryflag2" src="Images/GreekFlag.png" title="Greece">
-        <div class="middle2">
-        <div class="text2">Sruthi<br>Alex</div>
-          </div>
-          </div> 
-  </div>
-  <div class="col-sm-2 groups">
-    <p class="sectionheader2">Canada</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/GreenlandFlag.png" title="Canada">
-        <div class="middle2">
-        <div class="text2">Matt<br>Wade</div>
+  <div class="tabcontent container container2" id="Events">
+   <div class="container-fluid col-lg-12 eventtable">
+        <div class="r1 tableheader">
+            Team Size
         </div>
+        <div class="r2 tableheader">
+            Event
         </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/GreenlandFlag.png" title="Canada">
-        <div class="middle2">
-        <div class="text2">Dozz<br>Elizabeth</div>
+        <div class="r3 tableheader">
+            Format
         </div>
+        <div class="r4 tableheader">
+            # of Rounds/Attempts
         </div>
-  </div>
-
-  <div class="col-sm-2 groups">
-    <p class="sectionheader2">Wales</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/WelshFlag.png" title="Wales">
-        <div class="middle2">
-        <div class="text2">Brad<br>Chelsea</div>
+        <div class="r5 tableheader">
+            First Place pts
         </div>
+        <div class="s2 tableheader">
+            Medals Awarded
         </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/WelshFlag.png" title="Wales">
-        <div class="middle2">
-        <div class="text2">Evan<br>Nicole</div>
+        <div class="r6 tableheader">
+            Medal
         </div>
-        </div>
-  </div>
-
-  <div class="col-sm-2 groups">
-    <p class="sectionheader2">Germany</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/GermanFlag.png" title="Germany">
-        <div class="middle2">
-        <div class="text2">Camryn<br>Tyler</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/GermanFlag.png" title="Germany">
-        <div class="middle2">
-        <div class="text2">Zach<br>Rob</div>
-        </div>
-        </div>
-  </div>
-</div>
-<div>
-  <div class="col-sm-2 groups">
-    <p class="sectionheader2">Australia</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/AustralianFlag.png" title="Australia">
-        <div class="middle2">
-        <div class="text2">Sam<br>Kayla</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/AustralianFlag.png" title="Australia">
-        <div class="middle2">
-        <div class="text2">Cristina<br>Brandon</div>
-        </div>
-        </div>
-  </div>
-
-    <div class="col-sm-2 groups">
-    <p class="sectionheader2">Mexico</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/MexicanFlag.png" title="Mexico">
-        <div class="middle2">
-        <div class="text2">Eddie<br>Travis</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/MexicanFlag.png" title="Mexico">
-        <div class="middle2">
-        <div class="text2">Danny<br>Yukiko</div>
-        </div>
-        </div>
-  </div>
-
-    <div class="col-sm-2 groups">
-    <p class="sectionheader2">Japan</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/JapaneseFlag.png" title="Japan">
-        <div class="middle2">
-        <div class="text2">Dallas<br>Aya</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/JapaneseFlag.png" title="Japan">
-        <div class="middle2">
-        <div class="text2">Nick<br>Lauren</div>
-        </div>
-        </div>
-  </div>
-
-    <div class="col-sm-2 groups">
-    <p class="sectionheader2">Greenland</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/GreenlandFlag.png" title="Greenland">
-        <div class="middle2">
-        <div class="text2">Brittany<br>Wyatt</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/GreenlandFlag.png" title="Greenland">
-        <div class="middle2">
-        <div class="text2">David<br>Nik</div>
-        </div>
-        </div>
-  </div>
-</div>
-
-  <p class="sectionheader gameRules">Game Rules</p><img class="tabrules" src="Images/BeerPongRules.png" title="Beer Pong">
-</div>
+   </div>
+   <div class="container-flud tablerow">
+     <div class="tablesection r1">4v4</div>
+     <div class="tablesection r2">Flip Cup</div>
+     <div class="tablesection r3">Swiss Tournament</div>
+     <div class="tablesection r4">3</div>
+     <div class="tablesection r5">9</div>
+     <div class="tablesection s2">4 Gold</div>
+     <img class="tablesection r6 medalimage" src="Images/FlipCupMedal.png">
+   </div>
+   <div class="container-flud tablerow">
+     <div class="tablesection r1">4v4</div>
+     <div class="tablesection r2">Beer Pong Dueling</div>
+     <div class="tablesection r3">Swiss Tournament</div>
+     <div class="tablesection r4">3</div>
+     <div class="tablesection r5">9</div>
+     <div class="tablesection s2">4 Gold</div>
+     <img class="tablesection r6 medalimage" src="Images/BeerPongDuelingMedal.png">
+   </div>
+   <div class="container-flud tablerow">
+     <div class="tablesection r1">4v4</div>
+     <div class="tablesection r2">Cornhole Dueling</div>
+     <div class="tablesection r3">Swiss Tournament</div>
+     <div class="tablesection r4">3</div>
+     <div class="tablesection r5">9</div>
+     <div class="tablesection s2">4 Gold</div>
+     <img class="tablesection r6 medalimage" src="Images/CornholeDuelingMedal.png">
+   </div>
+   <div class="container-flud tablerow">
+     <div class="tablesection r1">2v2</div>
+     <div class="tablesection r2">Beer Pong</div>
+     <div class="tablesection r3">Swiss Tournament</div>
+     <div class="tablesection r4">4</div>
+     <div class="tablesection r5">11</div>
+     <div class="tablesection s2">2 Gold</div>
+     <img class="tablesection r6 medalimage" src="Images/BeerPongMedal.png">
+   </div>
+   <div class="container-flud tablerow">
+     <div class="tablesection r1">2v2</div>
+     <div class="tablesection r2">Beer Die</div>
+     <div class="tablesection r3">Swiss Tournament</div>
+     <div class="tablesection r4">3</div>
+     <div class="tablesection r5">9</div>
+     <div class="tablesection s2">2 Gold</div>
+     <img class="tablesection r6 medalimage" src="Images/DieMedal.png">
+   </div>
+   <div class="container-flud tablerow">
+     <div class="tablesection r1">2v2</div>
+     <div class="tablesection r2">Cornhole</div>
+     <div class="tablesection r3">Swiss Tournament</div>
+     <div class="tablesection r4">3</div>
+     <div class="tablesection r5">9</div>
+     <div class="tablesection s2">2 Gold</div>
+     <img class="tablesection r6 medalimage" src="Images/CornholeMedal.png">
+   </div>
+   <div class="container-flud tablerow">
+     <div class="tablesection r1">2</div>
+     <div class="tablesection r2">Relay</div>
+     <div class="tablesection r3">Heat (time)</div>
+     <div class="tablesection r4">2</div>
+     <div class="tablesection r5">9</div>
+     <div class="tablesection s2">2 Gold</div>
+     <img class="tablesection r6 medalimage" src="Images/RelayMedal.png">
+   </div>
+   <div class="container-flud tablerow">
+     <div class="tablesection r1">Individual</div>
+     <div class="tablesection r2">Track Race</div>
+     <div class="tablesection r3">Heat (time)</div>
+     <div class="tablesection r4">2</div>
+     <div class="tablesection r5">5</div>
+     <div class="tablesection s2">1 Gold/Silver/Bronze</div>
+     <img class="tablesection r6 medalimage" src="Images/TrackMedal.png">
+   </div>
+   <div class="container-flud tablerow">
+     <div class="tablesection r1">Individual</div>
+     <div class="tablesection r2">Pole Vault</div>
+     <div class="tablesection r3">Heat (score)</div>
+     <div class="tablesection r4">2</div>
+     <div class="tablesection r5">5</div>
+     <div class="tablesection s2">1 Gold/Silver/Bronze</div>
+     <img class="tablesection r6 medalimage" src="Images/PoleVaultMedal.png">
+   </div>
+   <div class="container-flud tablerow">
+     <div class="tablesection r1">Individual</div>
+     <div class="tablesection r2">Archery</div>
+     <div class="tablesection r3">Heat (score)</div>
+     <div class="tablesection r4">2</div>
+     <div class="tablesection r5">5</div>
+     <div class="tablesection s2">1 Gold/Silver/Bronze</div>
+     <img class="tablesection r6 medalimage" src="Images/ArcheryMedal.png">
+   </div>
+   <div class="container-flud tablerow championrow">
+     <div class="tablesection r1">1</div>
+     <div class="tablesection r2">Tournament MVP</div>
+     <div class="tablesection r3">Total Individual Score</div>
+     <div class="tablesection r4">NA</div>
+     <div class="tablesection r5">NA</div>
+     <div class="tablesection s2">1</div>
+     <img class="tablesection r6 medalimage" src="Images/MVPMedal.png">
+   </div>
+   <div class="container-flud tablerow championrow">
+     <div class="tablesection r1">4</div>
+     <div class="tablesection r2">Tournament Champions</div>
+     <div class="tablesection r3">Total Score</div>
+     <div class="tablesection r4">NA</div>
+     <div class="tablesection r5">NA</div>
+     <div class="tablesection s2">4 Gold/Silver/Bronze</div>
+     <img class="tablesection r6 medalimage" src="Images/ChampionsMedal.png">
+   </div>
+ </div>
 
 
-  <div class="tabcontent container container2" id="BeerDie">
-     <p class="sectionheader">Teams</p>
-<div>
-  <div class="col-sm-2 groups">
-    <p class="sectionheader2">Greece</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/GreekFlag.png" title="Greece">
-        <div class="middle2">
-        <div class="text2">Jer<br>Omid</div>
+  <div class="tabcontent container" id="Scoring">  
+    <p class="sectionheader2">Swiss Tournaments - Flip Cup/Cornhole/Beer Die/Dueling - 8 Teams</p>
+    <p>Every team plays 3 rounds, each vs an opponent with the same record. 2 points per win and a bonus 3 for going undefeated.</p>
+   <div class="container-fluid col-lg-12 ScoringTable">
+        <div class="r1 tableheader">
+            Round 1
         </div>
-    </div> 
-  </div>
-  <div class="col-sm-2 groups">
-    <p class="sectionheader2">Canada</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/GreenlandFlag.png" title="Canada">
-        <div class="middle2">
-        <div class="text2">Matt<br>Wade</div>
+        <div class="r2 tableheader">
+            Round 2
         </div>
+        <div class="r3 tableheader">
+            Round 3
         </div>
-  </div>
+        <div class="r4 tableheader">
+            Final Standings
+        </div>
+        <div class="r5 tableheader">
+            Points
+        </div>
+   </div>
 
-  <div class="col-sm-2 groups">
-    <p class="sectionheader2">Wales</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/WelshFlag.png" title="Wales">
-        <div class="middle2">
-        <div class="text2">Brad<br>Chelsea</div>
-        </div>
-        </div>
-  </div>
-
-  <div class="col-sm-2 groups">
-    <p class="sectionheader2">Germany</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/GermanFlag.png" title="Germany">
-        <div class="middle2">
-        <div class="text2">Camryn<br>Tyler</div>
-        </div>
-        </div>
-  </div>
-</div>
-<div>
-  <div class="col-sm-2 groups">
-    <p class="sectionheader2">Australia</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/AustralianFlag.png" title="Australia">
-        <div class="middle2">
-        <div class="text2">Sam<br>Kayla</div>
-        </div>
-        </div>
-  </div>
-
-    <div class="col-sm-2 groups">
-    <p class="sectionheader2">Mexico</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/MexicanFlag.png" title="Mexico">
-        <div class="middle2">
-        <div class="text2">Eddie<br>Travis</div>
-        </div>
-        </div>
-  </div>
-
-    <div class="col-sm-2 groups">
-    <p class="sectionheader2">Japan</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/JapaneseFlag.png" title="Japan">
-        <div class="middle2">
-        <div class="text2">Dallas<br>Nack</div>
-        </div>
-        </div>
-  </div>
-
-    <div class="col-sm-2 groups">
-    <p class="sectionheader2">Greenland</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/GreenlandFlag.png" title="Greenland">
-        <div class="middle2">
-        <div class="text2">Ulysses<br>Wyatt</div>
-        </div>
-        </div>
-  </div>
-</div>
-  <p class="sectionheader gameRules">Game Rules</p><img class="tabrules" src="Images/FlipCupRules.png" title="Flip Cup"></img>
+   <div class="container-flud scoringtablerow">
+     <div class="scoringtablesection r1">0-0</div>
+     <div class="scoringtablesection r2">1-0</div>
+     <div class="scoringtablesection r3">2-0</div>
+     <div class="scoringtablesection r4">3-0</div>
+     <div class="scoringtablesection r5">9</div>
+   </div>
+   <div class="container-flud scoringtablerow">
+     <div class="scoringtablesection r1">0-0</div>
+     <div class="scoringtablesection r2">1-0</div>
+     <div class="scoringtablesection r3">2-0</div>
+     <div class="scoringtablesection r4">2-1</div>
+     <div class="scoringtablesection r5">4</div>
+   </div>
+   <div class="container-flud scoringtablerow">
+     <div class="scoringtablesection r1">0-0</div>
+     <div class="scoringtablesection r2">1-0</div>
+     <div class="scoringtablesection r3">1-1</div>
+     <div class="scoringtablesection r4">2-1</div>
+     <div class="scoringtablesection r5">4</div>
+   </div>
+   <div class="container-flud scoringtablerow">
+     <div class="scoringtablesection r1">0-0</div>
+     <div class="scoringtablesection r2">1-0</div>
+     <div class="scoringtablesection r3">1-1</div>
+     <div class="scoringtablesection r4">2-1</div>
+     <div class="scoringtablesection r5">4</div>
+   </div>
+   <div class="container-flud scoringtablerow">
+     <div class="scoringtablesection r1">0-0</div>
+     <div class="scoringtablesection r2">0-1</div>
+     <div class="scoringtablesection r3">1-1</div>
+     <div class="scoringtablesection r4">1-2</div>
+     <div class="scoringtablesection r5">2</div>
+   </div>
+   <div class="container-flud scoringtablerow">
+     <div class="scoringtablesection r1">0-0</div>
+     <div class="scoringtablesection r2">0-1</div>
+     <div class="scoringtablesection r3">1-1</div>
+     <div class="scoringtablesection r4">1-2</div>
+     <div class="scoringtablesection r5">2</div>
+   </div>
+   <div class="container-flud scoringtablerow">
+     <div class="scoringtablesection r1">0-0</div>
+     <div class="scoringtablesection r2">0-1</div>
+     <div class="scoringtablesection r3">0-2</div>
+     <div class="scoringtablesection r4">1-2</div>
+     <div class="scoringtablesection r5">2</div>
+   </div>
+   <div class="container-flud scoringtablerow">
+     <div class="scoringtablesection r1">0-0</div>
+     <div class="scoringtablesection r2">0-1</div>
+     <div class="scoringtablesection r3">0-2</div>
+     <div class="scoringtablesection r4">0-3</div>
+     <div class="scoringtablesection r5">0</div>     
+   </div>
+<div class="padup">
+    <p class="sectionheader2">Beer Pong - 16 Teams</p>
+    <p>Same format as above but with twice as many teams and an extra round. You will only play vs your country's other team if you both make either the finals or last place game.</p>
 </div>
 
 
-  <div class="tabcontent container container2" id="Cornhole">
-     <p class="sectionheader">Groups</p>
-  <div class="col-sm-2 groups">
-    <p class="sectionheader2">A</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/SpanishFlag.png" title="Spain">
-        <div class="middle2">
-        <div class="text2">Raymond<br>Rick</div>
+<div class="row placementrow">
+<div class="col-lg-6">
+<div class="padup">
+    <p class="sectionheader2">2 Person Relay</p>
+    <p>All 16 teams are ranked 1-16 based on the best time of their 2 runs.</p>
+</div>
+ <div class="container-fluid PlacementTable">
+        <div class="r1 tableheader">
+            Place
         </div>
+        <div class="r2 tableheader">
+            Points
         </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/DenmarkFlag.png" title="Denmark">
-        <div class="middle2">
-        <div class="text2">Nathan<br>Val</div>
+   </div>
+   <div class="container-flud placementtablerow">
+     <div class="scoringtablesection r1">1st</div>
+     <div class="scoringtablesection r2">9</div>
+   </div>
+   <div class="container-flud placementtablerow">
+     <div class="scoringtablesection r1">2nd</div>
+     <div class="scoringtablesection r2">5</div>
+   </div>
+   <div class="container-flud placementtablerow">
+     <div class="scoringtablesection r1">3rd</div>
+     <div class="scoringtablesection r2">4</div>
+   </div>
+   <div class="container-flud placementtablerow">
+     <div class="scoringtablesection r1">4th-6th</div>
+     <div class="scoringtablesection r2">2</div>
+   </div>
+   <div class="container-flud placementtablerow">
+     <div class="scoringtablesection r1">7th-10th</div>
+     <div class="scoringtablesection r2">1</div>
+   </div>
+</div>
+
+<div class="col-lg-6">
+<div class="padup">
+    <p class="sectionheader2">Individual Events</p>
+    <p>All 32 players are ranked 1-32 based on the best time or score of their 2 runs.</p>
+</div>
+
+ <div class="container-fluid PlacementTable">
+        <div class="r1 tableheader">
+            Place
         </div>
+        <div class="r2 tableheader">
+            Points
         </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/ItalianFlag.png" title="Italy">
-        <div class="middle2">
-        <div class="text2">Brittany<br>Diego</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/MexicanFlag.png" title="Mexico">
-        <div class="middle2">
-        <div class="text2">Eddie<br>Travis</div>
-        </div>
-        </div>
+   </div>
+   <div class="container-flud placementtablerow">
+     <div class="scoringtablesection r1">1st</div>
+     <div class="scoringtablesection r2">5</div>
+   </div>
+   <div class="container-flud placementtablerow">
+     <div class="scoringtablesection r1">2nd</div>
+     <div class="scoringtablesection r2">4</div>
+   </div>
+   <div class="container-flud placementtablerow">
+     <div class="scoringtablesection r1">3rd</div>
+     <div class="scoringtablesection r2">3</div>
+   </div>
+   <div class="container-flud placementtablerow">
+     <div class="scoringtablesection r1">4th-8th</div>
+     <div class="scoringtablesection r2">2</div>
+   </div>
+   <div class="container-flud placementtablerow">
+     <div class="scoringtablesection r1">9th-16th</div>
+     <div class="scoringtablesection r2">1</div>
+   </div>
+</div>
+</div>
+</div>
+
+  <div class="tabcontent container" id="Schedule">
+<p>The first event starts at 11:00am, don't be late!</p>
+   <div class="container-flud scheduletable">
+    <div class="pad">1. Flip Cup tourney</div>
+    <div class="pad">2. Beer Die/Cornhole tourneys</div>
+    <div class="pad">3. 2 Person Relay</div>
+    <div class="pad">4. Solo events + lunch break</div>
+    <div class="pad">5. Cornhole Dueling + finish up solo events if needed</div>
+    <div class="pad">6. Beer Pong</div>
+    <div class="pad">7. Beer Pong Dueling</div>
   </div>
-  <div class="col-sm-2 groups">
-    <p class="sectionheader2">B</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/RussianFlag.png" title="Russia">
-        <div class="middle2">
-        <div class="text2">Conrad<br>Matt</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/JapaneseFlag.png" title="Japan">
-        <div class="middle2">
-        <div class="text2">Kris<br>Lexa</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/ScottishFlag.png" title="Scotland">
-        <div class="middle2">
-        <div class="text2">EJ<br>TJ</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/EnglishFlag.png" title="England">
-        <div class="middle2">
-        <div class="text2">Heather<br>Reece</div>
-          </div>
-          </div>
+  <p class="padup">Everything should finish up around 8-9pm giving us the night to do whatever we want.</p>
   </div>
-  <div class="col-sm-2 groups">
-    <p class="sectionheader2">C</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/KazakhstanFlag.png" title="Kazakhstan">
-        <div class="middle2">
-        <div class="text2">Dallas<br>Nick</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/GermanFlag.png" title="Germany">
-        <div class="middle2">
-        <div class="text2">Camryn<br>Rob</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/GreenlandFlag.png" title="Greenland">
-        <div class="middle2">
-        <div class="text2">David<br>Ulysses</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/SwissFlag.png" title="Switzerland">
-        <div class="middle2">
-        <div class="text2">Kayla<br>Sam</div>
-          </div>
-          </div> 
+
+  <div class="tabcontent container" id="Other">
+    <div class="container-flud othertable">
+    <div class="pad">Drinking required for flip cup/relay? - Will depend on driving situation and require everyone's ok with it.</div>
+    <div class="pad">Cabin check in 4pm friday, check out 10am. (I will call to ask to extend this)</div>
+    <div class="pad">Let's keep everything as clean as we can throughout the day so the next morning isn't a complete disaster.</div>
+    <div class="pad">Everyone helps clean up the next morning. People crashing elsewhere still pay full price since they get out of cleaning.</div>
+    <div class="pad">Equipment - let me know if you have cornhole sets/foldy tables/die tables/etc you can bring.</div>
+    <div class="pad">Beer/Food/Snacks - As usual we'll pick a ton of stuff up from costco to eat and drink throughout the day, unsure of lunch plans for now.</div>
+    <div class="pad">Be hype as fuck.</div>
   </div>
-  <div class="col-sm-2 groups">
-    <p class="sectionheader2">D</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/SouthKoreanFlag.png" title="South Korea">
-        <div class="middle2">
-        <div class="text2">Kevin<br>Tony</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/EgyptianFlag.png" title="Egypt">
-        <div class="middle2">
-        <div class="text2">Clay<br>Dozz</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/ChineseFlag.png" title="China">
-        <div class="middle2">
-        <div class="text2">Kevin<br>Vicki</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/IrishFlag.png" title="Ireland">
-        <div class="middle2">
-        <div class="text2">Jer<br>Sruthi</div>
-          </div>
-          </div> 
   </div>
-  <div class="col-sm-2 groups">
-    <p class="sectionheader2">E</p>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/AfghanistanFlag.png" title="Afghanistan">
-        <div class="middle2">
-        <div class="text2">Brandon<br>Omid</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/AmericanFlag.png" title="USA">
-        <div class="middle2">
-        <div class="text2">Alex<br>Chance</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/WelshFlag.png" title="Wales">
-        <div class="middle2">
-        <div class="text2">Brad<br>Evan</div>
-        </div>
-        </div>
-        <div class="eddie">
-        <img class="countryflag2" src="Images/ArgentinaFlag.png" title="Argentina">
-        <div class="middle2">
-        <div class="text2">Flo<br>Russ</div>
-        </div>
-        </div>
-  </div>  
-  <p class="sectionheader gameRules">Game Rules</p><img class="tabrules" src="Images/CornholeRules.png" title="Cornhole"></img>
-  <p class="sectionheader">Finals</p><img class="tabrules" src="Images/CornholeFinals.png" title="Cornhole Finals"></img></div>
-  <div class="tabcontent container" id="Relay">
-  <p class="sectionheader">Relay Rules</p><img class="tabrules" src="Images/RelayRules.png" title="Relay"></img>
-  <p class="sectionheader">Finals</p><img class="tabrules" src="Images/RelayFinals.png" title="RelayFinals"></img></div>
-  <div class="tabcontent container" id="More">
-  <p class="sectionheader">Scoring</p><img class="tabrules" src="Images/Scoring.png" title="Scoring"></img>
-  <p class="sectionheader">Awards</p><img class="tabrules" src="Images/Awards.png" title="Awards"></img>
-  <p class="sectionheader">Beer</p><img class="tabrules" src="Images/Beer.png" title="Beer"></div>
+
+
   <script>
   function openSection(evt, tabName) {
      var i, tabcontent, tablinks;
@@ -790,5 +951,6 @@
   }
   document.getElementById("defaultOpen").click();
   </script>
+
 </body>
 </html>
