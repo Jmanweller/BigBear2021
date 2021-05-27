@@ -412,6 +412,7 @@
     height: auto;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 10px;
     position: relative;
     background-color: #f4f4f4;
     display: grid;
@@ -430,6 +431,26 @@
     background-color: #f4f4f4;
     display: grid;
     text-align: center;
+}
+.note{
+  border-radius: 10px 10px 10px 10px;
+    border:1px solid #555;
+    margin-bottom: 10px;
+    padding-top:10px;
+    width: 40%;
+    height: 48px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    background-color: #f4f4f4;
+    display: grid;
+    text-align: center;
+}
+
+.schedulenote{
+  width:30%;
+  height: auto;
+  padding-bottom:10px;
 }
 
 #daysleft{
@@ -751,7 +772,10 @@
  </div>
 
 
-  <div class="tabcontent container" id="Scoring">  
+  <div class="tabcontent container" id="Scoring">
+    <div class="container-flud note">
+    <p>Try out the scoring format <a target="_blank" href="https://docs.google.com/spreadsheets/d/1PM9DOC72dKUwXG4LHSHXsj2OM9sN2_WkoKgNC0p5ztQ/edit?usp=sharing">here</a> (right click + duplicate the template sheet)<p>
+    </div>
     <p class="sectionheader2">Swiss Tournaments - Flip Cup/Cornhole/Beer Die/Dueling - 8 Teams</p>
     <p>Every team plays 3 rounds, each vs an opponent with the same record. 2 points per win and a bonus 3 for going undefeated.</p>
    <div class="container-fluid col-lg-12 ScoringTable">
@@ -909,7 +933,7 @@
 </div>
 
   <div class="tabcontent container" id="Schedule">
-<p>The first event starts at 11:00am, don't be late!</p>
+<p class="note schedulenote">The first event starts at 11:00am, don't be late!</p>
    <div class="container-flud scheduletable">
     <div class="pad">1. Flip Cup tourney</div>
     <div class="pad">2. Beer Die/Cornhole tourneys</div>
@@ -919,7 +943,7 @@
     <div class="pad">6. Beer Pong</div>
     <div class="pad">7. Beer Pong Dueling</div>
   </div>
-  <p class="padup">Everything should finish up around 8-9pm giving us the night to do whatever we want.</p>
+  <p class="note schedulenote padup">I'm guessing everything should finish up by around 8-9pm.</p>
   </div>
 
   <div class="tabcontent container" id="Other">
