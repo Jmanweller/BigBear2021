@@ -45,7 +45,7 @@
    flex-wrap: nowrap;
    align-items: flex-start;
    margin: 0px;
-   height: 215px;
+   height: 180px;
    overflow: hidden;
   }
 
@@ -335,6 +335,7 @@
  display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: -12px;
 }
 .championrow{
     background-color: #bbb;
@@ -509,6 +510,118 @@
   text-align: center;
   display: block;
 }
+.lightboximg{
+  height: 550px;
+  border-radius: 20px;
+    width: 550px;
+    object-fit: cover;
+padding: 0;
+margin: 0;
+text-align: center;
+}
+a.lightbox img {
+height: 150px;
+border: 3px solid white;
+box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+margin: 94px 20px 20px 20px;
+}
+
+.lightbox-target {
+position: fixed;
+top: -100%;
+width: 100%;
+background: rgba(0,0,0,.7);
+width: 100%;
+opacity: 0;
+left:0;
+-webkit-transition: opacity .5s ease-in-out;
+-moz-transition: opacity .5s ease-in-out;
+-o-transition: opacity .5s ease-in-out;
+transition: opacity .5s ease-in-out;
+overflow: hidden;
+}
+
+.lightbox-target img {
+margin: auto;
+position: absolute;
+top: 0;
+left:0;
+right:0;
+bottom: 0;
+max-height: 0%;
+max-width: 0%;
+border: 3px solid white;
+box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+box-sizing: border-box;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+  
+}
+
+/* Styles the close link, adds the slide down transition */
+
+a.lightbox-close {
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+
+a.lightbox-close:before {
+content: "";
+display: block;
+height: 30px;
+width: 1px;
+background: black;
+position: absolute;
+left: 26px;
+top:10px;
+-webkit-transform:rotate(45deg);
+-moz-transform:rotate(45deg);
+-o-transform:rotate(45deg);
+transform:rotate(45deg);
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+
+a.lightbox-close:after {
+content: "";
+display: block;
+height: 30px;
+width: 1px;
+background: black;
+position: absolute;
+left: 26px;
+top:10px;
+-webkit-transform:rotate(-45deg);
+-moz-transform:rotate(-45deg);
+-o-transform:rotate(-45deg);
+transform:rotate(-45deg);
+}
+
+/* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
+
+.lightbox-target:target {
+opacity: 1;
+top: 0;
+bottom: 0;
+  overflow:none;
+}
+
+.lightbox-target:target img {
+max-height: 100%;
+max-width: 100%;
+}
+
+.lightbox-target:target a.lightbox-close {
+top: 0;
+}
+
+
 </style>
 
 <title>Big Bear 2021</title>
@@ -702,7 +815,7 @@
             Medals Awarded
         </div>
         <div class="r6 tableheader">
-            Medal
+            Medal (click me)
         </div>
    </div>
    <div class="container-flud tablerow">
@@ -712,8 +825,12 @@
      <div class="tablesection r4">3</div>
      <div class="tablesection r5">9</div>
      <div class="tablesection s2">4 Gold</div>
-     <img class="tablesection r6 medalimage" src="Images/FlipCupMedal.png">
-   </div>
+     <div class="tablesection r6">
+       <a class="none" href="#FlipCup">
+        <img class=" medalimage" src="Images/FlipCupMedal.png"/>
+       </a> 
+     </div>
+  </div>
    <div class="container-flud tablerow">
      <div class="tablesection r1">4v4</div>
      <div class="tablesection r2">Beer Pong Dueling</div>
@@ -721,7 +838,11 @@
      <div class="tablesection r4">3</div>
      <div class="tablesection r5">9</div>
      <div class="tablesection s2">4 Gold</div>
-     <img class="tablesection r6 medalimage" src="Images/BeerPongDuelingMedal.png">
+          <div class="tablesection r6">
+       <a class="none" href="#BPDueling">
+        <img class=" medalimage" src="Images/BeerPongDuelingMedal.png"/>
+       </a> 
+     </div>
    </div>
    <div class="container-flud tablerow">
      <div class="tablesection r1">4v4</div>
@@ -730,7 +851,11 @@
      <div class="tablesection r4">3</div>
      <div class="tablesection r5">9</div>
      <div class="tablesection s2">4 Gold</div>
-     <img class="tablesection r6 medalimage" src="Images/CornholeDuelingMedal.png">
+          <div class="tablesection r6">
+       <a class="none" href="#CornholeDueling">
+        <img class=" medalimage" src="Images/CornholeDuelingMedal.png"/>
+       </a> 
+     </div>
    </div>
    <div class="container-flud tablerow">
      <div class="tablesection r1">2v2</div>
@@ -739,7 +864,11 @@
      <div class="tablesection r4">4</div>
      <div class="tablesection r5">11</div>
      <div class="tablesection s2">2 Gold</div>
-     <img class="tablesection r6 medalimage" src="Images/BeerPongMedal.png">
+          <div class="tablesection r6">
+       <a class="none" href="#BeerPong">
+        <img class=" medalimage" src="Images/BeerPongMedal.png"/>
+       </a> 
+     </div>
    </div>
    <div class="container-flud tablerow">
      <div class="tablesection r1">2v2</div>
@@ -748,7 +877,11 @@
      <div class="tablesection r4">3</div>
      <div class="tablesection r5">9</div>
      <div class="tablesection s2">2 Gold</div>
-     <img class="tablesection r6 medalimage" src="Images/DieMedal.png">
+          <div class="tablesection r6">
+       <a class="none" href="#BeerDie">
+        <img class=" medalimage" src="Images/DieMedal.png"/>
+       </a> 
+     </div>
    </div>
    <div class="container-flud tablerow">
      <div class="tablesection r1">2v2</div>
@@ -757,7 +890,11 @@
      <div class="tablesection r4">3</div>
      <div class="tablesection r5">9</div>
      <div class="tablesection s2">2 Gold</div>
-     <img class="tablesection r6 medalimage" src="Images/CornholeMedal.png">
+          <div class="tablesection r6">
+       <a class="none" href="#Cornhole">
+        <img class=" medalimage" src="Images/CornholeMedal.png"/>
+       </a> 
+     </div>
    </div>
    <div class="container-flud tablerow">
      <div class="tablesection r1">2</div>
@@ -766,16 +903,24 @@
      <div class="tablesection r4">2</div>
      <div class="tablesection r5">9</div>
      <div class="tablesection s2">2 Gold</div>
-     <img class="tablesection r6 medalimage" src="Images/RelayMedal.png">
+          <div class="tablesection r6">
+       <a class="none" href="#Relay">
+        <img class=" medalimage" src="Images/RelayMedal.png"/>
+       </a> 
+     </div>
    </div>
    <div class="container-flud tablerow">
      <div class="tablesection r1">Individual</div>
-     <div class="tablesection r2">Track Race</div>
+     <div class="tablesection r2">Beer Pong Race</div>
      <div class="tablesection r3">Heat (time)</div>
      <div class="tablesection r4">2</div>
      <div class="tablesection r5">5</div>
      <div class="tablesection s2">1 Gold/Silver/Bronze</div>
-     <img class="tablesection r6 medalimage" src="Images/TrackMedal.png">
+          <div class="tablesection r6">
+       <a class="none" href="#Track">
+        <img class=" medalimage" src="Images/TrackMedal.png"/>
+       </a> 
+     </div>
    </div>
    <div class="container-flud tablerow">
      <div class="tablesection r1">Individual</div>
@@ -784,16 +929,24 @@
      <div class="tablesection r4">2</div>
      <div class="tablesection r5">5</div>
      <div class="tablesection s2">1 Gold/Silver/Bronze</div>
-     <img class="tablesection r6 medalimage" src="Images/PoleVaultMedal.png">
+          <div class="tablesection r6">
+       <a class="none" href="#PoleVault">
+        <img class=" medalimage" src="Images/PoleVaultMedal.png"/>
+       </a> 
+     </div>
    </div>
    <div class="container-flud tablerow">
      <div class="tablesection r1">Individual</div>
-     <div class="tablesection r2">Archery</div>
+     <div class="tablesection r2">Beer Pong Archery</div>
      <div class="tablesection r3">Heat (score)</div>
      <div class="tablesection r4">2</div>
      <div class="tablesection r5">5</div>
      <div class="tablesection s2">1 Gold/Silver/Bronze</div>
-     <img class="tablesection r6 medalimage" src="Images/ArcheryMedal.png">
+          <div class="tablesection r6">
+       <a class="none" href="#Archery">
+        <img class=" medalimage" src="Images/ArcheryMedal.png"/>
+       </a> 
+     </div>
    </div>
    <div class="container-flud tablerow championrow">
      <div class="tablesection r1">1</div>
@@ -802,7 +955,11 @@
      <div class="tablesection r4">NA</div>
      <div class="tablesection r5">NA</div>
      <div class="tablesection s2">1</div>
-     <img class="tablesection r6 medalimage" src="Images/MVPMedal.png">
+          <div class="tablesection r6">
+       <a class="none" href="#MVP">
+        <img class=" medalimage" src="Images/MVPMedal.png"/>
+       </a> 
+     </div>
    </div>
    <div class="container-flud tablerow championrow">
      <div class="tablesection r1">4</div>
@@ -811,8 +968,66 @@
      <div class="tablesection r4">NA</div>
      <div class="tablesection r5">NA</div>
      <div class="tablesection s2">4 Gold/Silver/Bronze</div>
-     <img class="tablesection r6 medalimage" src="Images/ChampionsMedal.png">
+          <div class="tablesection r6">
+       <a class="none" href="#Champion">
+        <img class=" medalimage" src="Images/ChampionsMedal.png"/>
+       </a> 
+     </div>
    </div>
+       <a class="lightbox-close" href="#">
+     <div class=" lightbox-target" id="FlipCup">
+       <img class="lightboximg medalimage" src="Images/Medal_FlipCup.jpg"/>
+     </div>
+   </a>
+       <a class="lightbox-close" href="#">
+     <div class=" lightbox-target" id="BPDueling">
+       <img class="lightboximg medalimage" src="Images/Medal_BPDueling.jpg"/>
+     </div>
+   </a>
+       <a class="lightbox-close" href="#">
+     <div class=" lightbox-target" id="CornholeDueling">
+       <img class="lightboximg medalimage" src="Images/Medal_CornholeDueling.jpg"/>
+     </div>
+   </a>
+       <a class="lightbox-close" href="#">
+     <div class=" lightbox-target" id="BeerPong">
+       <img class="lightboximg medalimage" src="Images/Medal_BeerPong.jpg"/>
+     </div>
+     </a>
+       <a class="lightbox-close" href="#">
+     <div class=" lightbox-target" id="BeerDie">
+       <img class="lightboximg medalimage" src="Images/Medal_BeerDie.jpg"/>
+     </div></a>
+       <a class="lightbox-close" href="#">
+     <div class=" lightbox-target" id="Cornhole">
+       <img class="lightboximg medalimage" src="Images/Medal_Cornhole.jpg"/>
+     </div></a>
+       <a class="lightbox-close" href="#">
+     <div class=" lightbox-target" id="Relay">
+       <img class="lightboximg medalimage" src="Images/Medal_Relay.jpg"/>
+     </div></a>
+       <a class="lightbox-close" href="#">
+     <div class=" lightbox-target" id="Track">
+       <img class="lightboximg medalimage" src="Images/Medal_BPRace.jpg"/>
+     </div></a>
+       <a class="lightbox-close" href="#">
+     <div class=" lightbox-target" id="PoleVault">
+       <img class="lightboximg medalimage" src="Images/Medal_PoleVault.jpg"/>
+     </div></a>
+       <a class="lightbox-close" href="#">
+     <div class=" lightbox-target" id="Archery">
+       <img class="lightboximg medalimage" src="Images/Medal_Archery.jpg"/>
+     </div></a>
+       <a class="lightbox-close" href="#">
+     <div class=" lightbox-target" id="MVP">
+       <img class="lightboximg medalimage" src="Images/Medal_MVP.jpg"/>
+     </div></a>
+       <a class="lightbox-close" href="#">
+     <div class=" lightbox-target" id="Champion">
+       <img class="lightboximg medalimage " src="Images/Medal_Champion.jpg"/>
+     </div>
+   </a>
+
  </div>
   <div class="tabcontent container" id="Scoring">
     <div class="container-flud note">
